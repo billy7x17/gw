@@ -37,7 +37,7 @@
 	<constant name="struts.custom.i18n.resources" value="i18n" />
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
 
-	<package name="elsp-default" extends="struts-default">
+	<!-- <package name="elsp-default" extends="struts-default">
 		<interceptors>
 			<interceptor name="cleanBuffer"
 				class="com.neusoft.zjop.service.util.CleanBufferInterceptor" />
@@ -61,7 +61,7 @@
 		</interceptors>
 
 		<default-interceptor-ref name="elspStack" />
-	</package>
+	</package> -->
 
 
 </struts>
