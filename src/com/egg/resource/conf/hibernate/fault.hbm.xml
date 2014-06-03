@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<!-- class元素指定类和表的映射 -->
+	<class name="com.egg.dao.domain.Fault" table="zjop_fault">
+		<!-- id元素设定持久化类的OID和表的主键的映射 -->
+		<id name="fault_id" column="fault_id" type="int"><!-- Hibernate映射类型 -->
+			<!-- generator元素指定对象标识符生成器 -->
+			<generator class="native" >
+			</generator>
+		</id>
+		
+		<property name="fault_name" type="string" column="fault_name">
+			
+		</property>
+		
+		<property name="fault_description" type="text" column="fault_description">
+			
+		</property>
+		
+		<property name="fault_update_time" type="timestamp" column="fault_update_time">
+			
+		</property>
+
+
+		<!-- property元素设定类的属性和表的字段的映射 -->
+	</class>
+</hibernate-mapping>
