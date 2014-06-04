@@ -63,5 +63,5 @@
 		<default-interceptor-ref name="elspStack" />
 	</package> -->
 
-
+	<include file="/conf/struts/struts_test.xml"></include>
 </struts>

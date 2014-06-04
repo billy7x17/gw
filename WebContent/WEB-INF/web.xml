@@ -6,6 +6,9 @@
 	id="WebApp_ID" version="2.5">
 	<display-name>sygw</display-name>
 
+	<welcome-file-list>
+		<welcome-file>getFaults.shtml</welcome-file>
+	</welcome-file-list>
 
 	<!-- spring bean间的参数传递字符集配置 -->
 	<filter>
@@ -90,16 +93,4 @@
 		<error-code>500</error-code>
 		<location>/WEB-INF/page/error/500.jsp</location>
 	</error-page>
-
-
-
-
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-	</welcome-file-list>
 </web-app>
