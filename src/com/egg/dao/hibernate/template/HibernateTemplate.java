@@ -1,46 +1,59 @@
 package hibernate.template;
 
-import hibernate.hibernateUtil.HibernateUtil;
-
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-public abstract class HibernateTemplate
-{
+public abstract class HibernateTemplate {
 
-	protected void executeUpdte(HAction action)
-	{
-		Session session = null;
+	private SessionFactory sessionFactory;
+
+	protected void executeUpdte(HAction action) {
 		Transaction tr = null;
-		try
-		{
-			session = HibernateUtil.getSession();
+
+		Session session = null;
+
+		try {
+
+			session = sessionFactory.openSession();
 
 			tr = session.beginTransaction();
 
 			action.execute(session);
 
 			tr.commit();
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			tr.rollback();
-		}
-		finally
-		{
+			e.printStackTrace();
+		} finally {
 			session.close();
 		}
 
 	}
 
-	protected Object executeQuery(HAction action)
-	{
-		Session session = HibernateUtil.getSession();
+	protected Object executeQuery(HAction action) {
+
+		Session session = sessionFactory.openSession();
 
 		Object object = action.execute(session);
 
 		session.close();
 
 		return object;
+	}
+
+	/**
+	 * @return the sessionFactory
+	 */
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	/**
+	 * @param sessionFactory
+	 *            the sessionFactory to set
+	 */
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 }

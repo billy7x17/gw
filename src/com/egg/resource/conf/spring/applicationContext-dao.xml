@@ -9,6 +9,9 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
 	<!-- Test -->
-	<bean id="faultDao" class="test.FaultDao" scope="prototype"></bean>
-
+	<bean id="faultDao" class="test.FaultDao" scope="prototype">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
 </beans>

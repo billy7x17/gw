@@ -2,6 +2,7 @@ package test;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import domain.Fault;
@@ -9,7 +10,7 @@ import hibernate.template.HAction;
 import hibernate.template.HibernateTemplate;
 
 public class FaultDao extends HibernateTemplate {
-
+	
 	public void insertFault(final Fault fault) {
 		executeUpdte(new HAction() {
 			@Override
@@ -54,7 +55,10 @@ public class FaultDao extends HibernateTemplate {
 		return (List<Fault>) executeQuery(new HAction() {
 			@Override
 			public Object execute(Session session) {
-				return session.createQuery("from Fault");
+				
+				Query query = session.createQuery("from Fault");
+				
+				return query.list();
 			}
 		});
 	}

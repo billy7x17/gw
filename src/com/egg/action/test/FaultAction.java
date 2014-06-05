@@ -11,6 +11,14 @@ public class FaultAction {
 	private Fault fault;
 
 	public String execute() {
+		
+		if (null == fault) {
+			fault = new Fault();
+			fault.setFault_id(88);
+			fault.setFault_name("ssh测试");
+			fault.setFault_description("ssh测试测试");
+		}
+		
 		List<Fault> list = service.execute(fault);
 
 		System.out.println(list);
