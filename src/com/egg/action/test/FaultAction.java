@@ -2,9 +2,13 @@ package test;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import domain.Fault;
 
 public class FaultAction {
+	
+	private final Logger log = Logger.getLogger("test.FaultAction"); 
 
 	private FaultService service;
 
