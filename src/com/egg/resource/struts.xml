@@ -37,31 +37,43 @@
 	<constant name="struts.custom.i18n.resources" value="i18n" />
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
 
-	<!-- <package name="elsp-default" extends="struts-default">
+	 <package name="elsp-default" extends="struts-default">
 		<interceptors>
+		
 			<interceptor name="cleanBuffer"
-				class="com.neusoft.zjop.service.util.CleanBufferInterceptor" />
+				class="interceptor.CleanBufferInterceptor" />
 
 			<interceptor name="pageInterceptor"
-				class="com.neusoft.zjop.action.page.TurnPageInterceptor" />
-
-			<interceptor name="casInterceptor"
-				class="com.neusoft.zjop.service.util.CasInterceptor" />
+				class="util.page.TurnPageInterceptor" />
 
 			<interceptor name="EncodingInterceptor"
-				class="com.neusoft.zjop.service.util.EncodingInterceptor" />
+				class=" interceptor.EncodingInterceptor" />
 
 			<interceptor-stack name="elspStack">
 				<interceptor-ref name="cleanBuffer" />
 				<interceptor-ref name="EncodingInterceptor" />
-				<interceptor-ref name="casInterceptor" />
 				<interceptor-ref name="pageInterceptor" />
-				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="defaultStack">
+							<param name="params.excludeParams">(.*\.|^|.*|\[('|"))(c|C)lass(\.|('|")]|\[).*,^dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,^parameters\..*,^action:.*,^method:.*</param>
+				</interceptor-ref>
 			</interceptor-stack>
 		</interceptors>
 
 		<default-interceptor-ref name="elspStack" />
-	</package> -->
+		
+		<global-results>
+			<result name="Exception">
+				WEB-INF/page/error/500.jsp
+			</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping result="Exception" exception="java.lang.Exception">
+			</exception-mapping>
+		</global-exception-mappings>
+		
+		
+	</package>
 
 	<include file="/conf/struts/struts_test.xml"></include>
 </struts>
