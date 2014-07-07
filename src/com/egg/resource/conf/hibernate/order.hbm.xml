@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<!-- class元素指定类和表的映射 -->
+	<class name="domain.Order" table="portal_order_t">
+		<!-- id元素设定持久化类的OID和表的主键的映射 -->
+		<id name="order_id" column="order_id" type="int"><!-- Hibernate映射类型 -->
+			<!-- generator元素指定对象标识符生成器 -->
+		</id>
+
+		<property name="order_price" type="big_decimal"  column="order_price">
+			
+		</property>
+
+		<property name="order_person" type="int" column="order_person">
+
+		</property>
+
+		<property name="order_type" type="int" column="order_type">
+
+		</property>
+
+		<property name="order_status" type="int" column="order_status">
+
+		</property>
+		<property name="order_goods" type="int" column="order_goods">
+
+		</property>
+		<property name="create_time" type="timestamp" column="create_time">
+
+		</property>
+		<!-- property元素设定类的属性和表的字段的映射 -->
+	</class>
+</hibernate-mapping>
