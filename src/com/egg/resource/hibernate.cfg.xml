@@ -9,10 +9,10 @@
 	<session-factory>
 		<property name="myeclipse.connection.profile">mySQL</property>
 		<property name="connection.url">
-			jdbc:mysql://10.10.127.206:3306/zjop
+			jdbc:mysql://10.10.127.98:3306/egg_jianlou
 		</property>
-		<property name="connection.username">zjcloud_portal</property>
-		<property name="connection.password">zjcloud_portal</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">199001122373</property>
 		<property name="connection.driver_class">
 			com.mysql.jdbc.Driver
 		</property>

@@ -47,7 +47,7 @@
 				class="util.page.TurnPageInterceptor" />
 
 			<interceptor name="EncodingInterceptor"
-				class=" interceptor.EncodingInterceptor" />
+				class="interceptor.EncodingInterceptor" />
 
 			<interceptor-stack name="elspStack">
 				<interceptor-ref name="cleanBuffer" />
@@ -76,4 +76,5 @@
 	</package>
 
 	<include file="/conf/struts/struts_test.xml"></include>
+	<include file="/conf/struts/struts_user.xml"></include>
 </struts>

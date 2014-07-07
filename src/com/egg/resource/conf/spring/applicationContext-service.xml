@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
@@ -10,14 +9,19 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
 	<!-- test -->
-	<bean id="faultService" class="test.FaultService"
-		scope="prototype">
+	<bean id="faultService" class="test.FaultService" scope="prototype">
 		<property name="dao">
 			<ref bean="faultDao" />
 		</property>
 	</bean>
 
-	<bean id="cleanBuffer" class="interceptor.CleanBufferInterceptor" scope="prototype">
+	<bean id="cleanBuffer" class="interceptor.CleanBufferInterceptor"
+		scope="prototype">
 	</bean>
 
+	<bean id="userService" class="user.impl.UserServiceImpl" scope="prototype">
+		<property name="dao">
+			<ref bean="userDao" />
+		</property>
+	</bean>
 </beans>

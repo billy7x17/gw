@@ -49,7 +49,10 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		</property>
 		<property name="mappingResources">
 			<list>
-				<value>conf/hibernate/fault.hbm.xml</value>
+				<value>conf/hibernate/goods.hbm.xml</value>
+				<value>conf/hibernate/order.hbm.xml</value>
+				<value>conf/hibernate/store.hbm.xml</value>
+				<value>conf/hibernate/user.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
