@@ -39,7 +39,8 @@ public class UserDaoImpl implements UserDao
 	@SuppressWarnings("unchecked")
 	public List<User> getUserByName(String name) throws Exception
 	{
-		return dao.findByNamedParam("from portal_user_t" , "user_name" , name);
+		return dao
+				.find("from domain.User where user_name = " + name);
 	}
 
 	@SuppressWarnings("unchecked")
