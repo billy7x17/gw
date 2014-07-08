@@ -16,6 +16,11 @@ public class Register
 
 	private String errMsg;
 
+	public String show() throws Exception
+	{
+		return "success";
+	}
+
 	public String execute() throws Exception
 	{
 		/* 1-用户名重名 2-邮箱已被注册 */
