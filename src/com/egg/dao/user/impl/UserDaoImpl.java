@@ -3,8 +3,8 @@ package user.impl;
 import java.util.List;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
-
 import user.UserDao;
+import util.StringUtil;
 
 import domain.User;
 
@@ -28,25 +28,31 @@ public class UserDaoImpl implements UserDao
 	public List<User> getUser(User user) throws Exception
 	{
 
-		String[] paras = new String[]
-		{"user_id" , "user_name" , "email"};
-		String[] values = new String[]
-		{user.getUser_id().toString() , user.getUser_name() , user.getEmail()};
+		StringBuffer sql = new StringBuffer("from domain.User where 1=1 ");
 
-		return dao.findByNamedParam("from portal_user_t" , paras , values);
+		if(!StringUtil.isNull(user.getUser_name()))
+		{
+			sql.append(" and user_name = ?");
+		}
+		if(!StringUtil.isNull(user.getPassword()))
+		{
+			sql.append(" and password = ?");
+		}
+
+		return dao.find(sql.toString() , new String[]
+		{user.getUser_name() , user.getPassword()});
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<User> getUserByName(String name) throws Exception
 	{
-		return dao
-				.find("from domain.User where user_name = " + name);
+		return dao.find("from domain.User where user_name = " + name);
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<User> getUserByEmail(String email) throws Exception
 	{
-		return dao.findByNamedParam("from portal_user_t" , "email" , email);
+		return dao.find("from domain.User where email = " + email);
 	}
 
 	/**
