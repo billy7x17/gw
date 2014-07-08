@@ -16,6 +16,12 @@
 		</result>
 	</action>
 
+	<action name="toRegister" class="register" method="show">
+		<result name="success">
+			/WEB-INF/page/user/register.jsp
+		</result>
+	</action>
+
 	<action name="register" class="register">
 		<result name="success">
 			/WEB-INF/page/user/register.jsp
