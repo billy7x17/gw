@@ -11,7 +11,7 @@
 	<s:form action="register.shtml">
 	用户名： <input type="text" name="domain.user_name" />
 	密码：      <input type="password" name="domain.password" />
-		<input type="submit" />
+		<input type="submit" value="注册"/>
 	</s:form>
 </body>
 </html>
