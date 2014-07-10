@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50613
 File Encoding         : 65001
 
-Date: 2014-07-07 17:10:57
+Date: 2014-07-10 17:23:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `portal_goods_t`;
 CREATE TABLE `portal_goods_t` (
-  `goods_id` int(10) NOT NULL COMMENT '自增主键',
+  `goods_id` varchar(100) NOT NULL COMMENT '商品ID',
   `goods_name` varchar(30) NOT NULL COMMENT '商品名称',
   `goods_icon` varchar(255) NOT NULL COMMENT '商品小图标(展示在首页和商品列表上的)url',
   `goods_price` decimal(10,2) NOT NULL COMMENT '商品定价',
@@ -30,6 +30,7 @@ CREATE TABLE `portal_goods_t` (
   `is_sold` int(1) NOT NULL COMMENT '是否售出  0-未售出  1-已售出',
   `create_time` datetime NOT NULL COMMENT '上架时间(暂定)',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '最后更新时间',
+  `goods_order` int(10) DEFAULT NULL COMMENT '商品排序(不正当竞争)',
   PRIMARY KEY (`goods_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品信息表';
 
@@ -57,12 +58,32 @@ CREATE TABLE `portal_order_t` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for portal_record_t
+-- ----------------------------
+DROP TABLE IF EXISTS `portal_record_t`;
+CREATE TABLE `portal_record_t` (
+  `record_id` int(255) NOT NULL AUTO_INCREMENT COMMENT '浏览记录ID 自增主键',
+  `user_id` int(10) NOT NULL COMMENT '浏览用户ID',
+  `goods_id` int(10) NOT NULL COMMENT '浏览商品ID',
+  `store_id` int(10) NOT NULL COMMENT '浏览商品所属店铺ID',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '浏览记录创建时间(浏览时间)',
+  PRIMARY KEY (`record_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户浏览记录表';
+
+-- ----------------------------
+-- Records of portal_record_t
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for portal_store_t
 -- ----------------------------
 DROP TABLE IF EXISTS `portal_store_t`;
 CREATE TABLE `portal_store_t` (
   `store_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '店铺自增主键',
   `store_name` varchar(50) NOT NULL COMMENT '店铺名称',
+  `store_addr` varchar(100) NOT NULL COMMENT '店铺地址',
+  `store_contact` varchar(10) NOT NULL COMMENT '店铺联系人',
+  `contact_phone` varchar(15) NOT NULL COMMENT '联系人电话',
   `create_time` datetime NOT NULL COMMENT '店铺建立时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '最后更新时间',
   PRIMARY KEY (`store_id`)
