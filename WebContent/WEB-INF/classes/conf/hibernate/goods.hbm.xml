@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<!-- class元素指定类和表的映射 -->
+	<class name="domain.Goods" table="portal_goods_t">
+		<!-- id元素设定持久化类的OID和表的主键的映射 -->
+		<id name="goods_id" column="goods_id" type="int"><!-- Hibernate映射类型 -->
+			<!-- generator元素指定对象标识符生成器 -->
+		</id>
+
+		<property name="goods_name" type="string" column="goods_name">
+
+		</property>
+
+		<property name="goods_icon" type="string" column="goods_icon">
+
+		</property>
+
+		<property name="goods_price" type="big_decimal" column="goods_price">
+
+		</property>
+
+		<property name="belong_to_store" type="int" column="belong_to_store">
+
+		</property>
+		<property name="sale_type" type="int" column="sale_type">
+
+		</property>
+		<property name="goods_desc" type="text" column="goods_desc">
+
+		</property>
+		<property name="is_sold" type="int" column="is_sold">
+
+		</property>
+		<property name="create_time" type="timestamp" column="create_time">
+
+		</property>
+		<property name="update_time" type="timestamp" column="update_time">
+
+		</property>
+		<!-- property元素设定类的属性和表的字段的映射 -->
+	</class>
+</hibernate-mapping>

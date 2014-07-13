@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<!-- class元素指定类和表的映射 -->
+	<class name="domain.User" table="portal_user_t">
+		<!-- id元素设定持久化类的OID和表的主键的映射 -->
+		<id name="user_id" column="user_id" type="int"><!-- Hibernate映射类型 -->
+			<!-- generator元素指定对象标识符生成器 -->
+		</id>
+
+		<property name="user_name" type="string" column="user_name">
+
+		</property>
+
+		<property name="password" type="string" column="password">
+
+		</property>
+
+		<property name="user_nick" type="string" column="user_nick">
+
+		</property>
+
+		<property name="user_head" type="string" column="user_head">
+
+		</property>
+		<property name="user_sex" type="string" column="user_sex">
+
+		</property>
+		<property name="email" type="string" column="email">
+
+		</property>
+		<property name="mobile" type="string" column="mobile">
+
+		</property>
+		<property name="user_styles" type="string" column="user_styles">
+
+		</property>
+		<property name="recent_bid" type="int" column="recent_bid">
+
+		</property>
+		<property name="recent_buy" type="int" column="recent_buy">
+
+		</property>
+
+		<property name="create_time" type="timestamp" column="create_time">
+
+		</property>
+
+		<property name="update_time" type="timestamp" column="update_time">
+
+		</property>
+		<!-- property元素设定类的属性和表的字段的映射 -->
+	</class>
+</hibernate-mapping>
