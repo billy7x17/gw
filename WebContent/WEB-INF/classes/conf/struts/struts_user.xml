@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<package name="user" extends="elsp-default">
+	<action name="welcome" class="logon" method="show">
+		<result name="success">
+			/WEB-INF/page/logon/logon.jsp
+		</result>
+	</action>
+
+	<action name="logon" class="logon">
+		<result name="success">
+			/WEB-INF/page/logon/logon.jsp
+		</result>
+	</action>
+
+	<action name="toRegister" class="register" method="show">
+		<result name="success">
+			/WEB-INF/page/user/register.jsp
+		</result>
+	</action>
+
+	<action name="register" class="register">
+		<result name="success">
+			/WEB-INF/page/user/register.jsp
+		</result>
+	</action>
+</package>
+
+</struts>
