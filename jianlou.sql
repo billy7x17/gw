@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : local
-Source Server Version : 50613
-Source Host           : localhost:3306
+Source Server         : localhost
+Source Server Version : 50617
+Source Host           : 127.0.0.1:3307
 Source Database       : egg_jianlou
 
 Target Server Type    : MYSQL
-Target Server Version : 50613
+Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2014-07-10 17:23:59
+Date: 2014-07-13 22:46:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -37,6 +37,21 @@ CREATE TABLE `portal_goods_t` (
 -- ----------------------------
 -- Records of portal_goods_t
 -- ----------------------------
+INSERT INTO `portal_goods_t` VALUES ('08f9d4a03b1e2c7d', '吴作人花鸟画', '', '404.00', '8', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('0c3b58fc8c9a5555', '周桂珍款制竹节圆壶带六件杯盏', '', '399.00', '3', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('0d5333686d935006', '钧瓷桃型洗', '', '411.00', '15', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('405303bb6c820b6a', '“光绪元宝”（款）钱币', '', '410.00', '14', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('6ccca71e15426c0a', '宣德款斗青釉红玉彩凤纹盘', '', '403.00', '7', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('76a6bb55fce39f16', '周桂珍（款）紫砂炉', '', '409.00', '13', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('7ec4fa100b0f86bd', '程十发草原儿女故事图', '', '408.00', '12', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('8312bdad3d5b1cb5', '铜质八卦纹葫芦瓶', '', '398.00', '2', '0', '', '0', '2014-07-12 00:05:13', '2014-07-12 00:05:13', '0');
+INSERT INTO `portal_goods_t` VALUES ('bf0641e2b2702d42', '官窑青釉三足炉', '', '397.00', '1', '0', '', '0', '2014-07-12 00:05:13', '2014-07-12 00:05:13', '0');
+INSERT INTO `portal_goods_t` VALUES ('cbea5e50915997e0', '宣德款青花云龙纹盘', '', '402.00', '6', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('d512e276ec7df03a', '顾景舟款瓜棱壶', '', '401.00', '5', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('dbe24dc29995aa20', '谷纹玉璧', '', '405.00', '9', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('dd0468faf5e3072b', '宣德款三足炉', '', '400.00', '4', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('e39034d0cd3ede11', '观世音坐像', '', '406.00', '10', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
+INSERT INTO `portal_goods_t` VALUES ('fb44c173617e4fd9', '《孟子》卷七线装书', '', '407.00', '11', '0', '', '0', '2014-07-12 00:05:14', '2014-07-12 00:05:14', '0');
 
 -- ----------------------------
 -- Table structure for portal_order_t
@@ -87,11 +102,26 @@ CREATE TABLE `portal_store_t` (
   `create_time` datetime NOT NULL COMMENT '店铺建立时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '最后更新时间',
   PRIMARY KEY (`store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='店铺信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='店铺信息表';
 
 -- ----------------------------
 -- Records of portal_store_t
 -- ----------------------------
+INSERT INTO `portal_store_t` VALUES ('1', '求是阁', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('2', '玉缘阁', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('3', '古风堂', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('4', '佛缘堂', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('5', '古雅堂', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('6', '锦砂轩', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('7', '青田石府', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('8', '明匯画廊', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('9', '艺萊轩', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('10', '山云楼', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('11', '墨宝斋', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('12', '融贤堂', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('13', '鸿嘉轩', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('14', '纪元新语', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
+INSERT INTO `portal_store_t` VALUES ('15', '锦瑯阁', '沈阳市和平区xxx路XXX号', '艾书尧', '13840079746', '2014-07-11 23:53:12', '2014-07-11 23:53:12');
 
 -- ----------------------------
 -- Table structure for portal_user_t
