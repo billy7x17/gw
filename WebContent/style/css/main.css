@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body {
+	font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+	color: #666;
+	margin: 0px;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+#headInfoDiv {
+	height: 30px;
+	background: #F7F7F7;
+	margin: 0px;
+	width: 100%;
+}
+
+#headInfoDiv ul {
+	float: right;
+}
+
+#headInfoDiv ul li {
+	float: left;
+	height: 30px;
+	padding: 0 11px 0 12px;
+}
