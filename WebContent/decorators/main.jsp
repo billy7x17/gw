@@ -9,12 +9,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- javaScript嵌入 -->
 <!-- css嵌入 -->
-<title>123</title>
-<decorator:head />
+<title>艾格捡漏网</title>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/public/jquery-1.11.0.min.js"></script>
+<link charset="utf-8" rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/style/css/main.css">
 
+<decorator:head />
+<%
+	response.setContentType("application/String; charset=utf-8");
+	response.setHeader("pragma", "no-cache");
+	response.setHeader("cache-control", "no-cache");
+%>
 </head>
 
 <body>
-<decorator:body />
+	<div id="headInfoDiv">
+		<ul>
+			<li>您好，欢迎来捡漏</li>
+			<li><a href="logon();">[登陆]</a></li>
+			<li><a href="register();">[注册]</a></li>
+		</ul>
+	</div>
+	<decorator:body />
 </body>
 </html>
