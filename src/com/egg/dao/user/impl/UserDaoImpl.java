@@ -46,13 +46,15 @@ public class UserDaoImpl implements UserDao
 	@SuppressWarnings("unchecked")
 	public List<User> getUserByName(String name) throws Exception
 	{
-		return dao.find("from domain.User where user_name = " + name);
+		List<User> result = dao.find("from domain.User where user_name = ?" , name);
+
+		return result;
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<User> getUserByEmail(String email) throws Exception
 	{
-		return dao.find("from domain.User where email = " + email);
+		return dao.find("from domain.User where email = ?" , email);
 	}
 
 	/**
