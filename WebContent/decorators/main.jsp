@@ -21,7 +21,7 @@
 %>
 </head>
 
-<body>
+<body onselectstart="return false">
 	<div id="headInfoDiv">
 		<ul>
 			<li>您好，欢迎来捡漏</li>
@@ -29,6 +29,13 @@
 			<li><a href="register();">[注册]</a></li>
 		</ul>
 	</div>
+	<ul>
+		<li class="tab"><span>首页</span></li>
+		<li class="tab"><span>最新捡漏</span></li>
+		<li class="tab"><span>往期漏宝</span></li>
+		<li class="tab"><span>捡漏城</span></li>
+		<li class="tab"><span>捡漏论坛</span></li>
+	</ul>
 	<decorator:body />
 </body>
 </html>
