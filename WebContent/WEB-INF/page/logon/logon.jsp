@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>用户登陆|艾哥捡漏网</title>
 <link charset="utf-8" rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/style/css/mainPage.css">
 </head>
@@ -33,6 +32,8 @@
 			<div id="demo2"></div>
 		</div>
 	</div>
+	
+	
 	<script type="text/javascript">
 		var speed = 10;
 		var tab = document.getElementById("demo");
