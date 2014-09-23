@@ -1,9 +1,10 @@
 /*¹ö¶¯Í¼Æ¬divÑùÊ½*/
 #demo {
+	width: 700px;
 	background: #FFF;
 	overflow: hidden;
 	border: 1px dashed #CCC;
-	width: 500px;
+	margin: 0px 0px 0px 70px;
 }
 
 #demo img {
