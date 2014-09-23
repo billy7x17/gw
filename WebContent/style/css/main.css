@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body {
+	-moz-user-select:   none;
 	font: 12px/150% Arial, Verdana, "\5b8b\4f53";
 	color: #666;
 	margin: 0px;
@@ -25,4 +26,26 @@ ul,ol {
 	float: left;
 	height: 30px;
 	padding: 0 11px 0 12px;
+}
+
+.tab {
+	float: left;
+	height: 30px;
+	width: 150px;
+	background: #f4f4f4;
+	border: none;
+	text-align: center;
+	padding-top: 8px;
+	margin: 0px 0px 10px 30px;
+}
+
+.tab span {
+	font: 15px Microsoft YaHei;
+	font-weight: inherit;
+}
+
+.tab:HOVER {
+	font-weight: 700;
+	text-decoration: underline;
+	cursor: pointer;
 }
