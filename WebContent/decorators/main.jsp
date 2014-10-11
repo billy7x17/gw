@@ -29,13 +29,15 @@
 			<li><a href="register();">[注册]</a></li>
 		</ul>
 	</div>
-	<ul>
+	<ul style="margin-left: 100px;">
 		<li class="tab"><span>首页</span></li>
 		<li class="tab"><span>最新捡漏</span></li>
 		<li class="tab"><span>往期漏宝</span></li>
 		<li class="tab"><span>捡漏城</span></li>
 		<li class="tab"><span>捡漏论坛</span></li>
 	</ul>
-	<decorator:body />
+	<div class="mainDiv">
+		<decorator:body />
+	</div>
 </body>
 </html>

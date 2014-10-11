@@ -11,6 +11,10 @@ ul,ol {
 	list-style: none;
 }
 
+.mainDiv {
+	margin: 30px 100px 0px 100px;
+}
+
 #headInfoDiv {
 	height: 30px;
 	background: #F7F7F7;
@@ -48,4 +52,56 @@ ul,ol {
 	font-weight: 700;
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+#today {
+	height: 260px;
+}
+
+.head {
+	float: left;
+	width: 100%;
+	height: 30px;
+	background: #F7F7F7;
+}
+
+.head span {
+	font: 15px Microsoft YaHei;
+	margin-left: 20px;
+}
+
+.more {
+	float: right;
+	width: 100%;
+	height: 30px;
+}
+
+.more a {
+	float: inherit;
+}
+
+.content {
+	float: left;
+	width: 100%;
+	height: 200px;
+}
+
+.content a {
+	float: inherit;
+	width: 200px;
+	height: 200px;	
+	margin-left: 100px;
+}
+
+.content a img {
+	float: inherit;
+	width: 200px;
+	height: 175px;
+}
+
+.content a span {
+	float: inherit;
+	text-decoration: none;
+	font: 10px Microsoft YaHei;
+	text-align: center;
 }
