@@ -38,7 +38,7 @@ public class LoginFilter implements Filter
 
 		if(uri.endsWith("/"))
 		{
-			resp.sendRedirect(contextPath + "/welcome.shtml");
+			resp.sendRedirect(contextPath + "/wtf/welcome.shtml");
 			return;
 		}
 
