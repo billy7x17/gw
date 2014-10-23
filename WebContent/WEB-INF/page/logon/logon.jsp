@@ -81,6 +81,16 @@
 		};
 		//生成对象时自动加载init()方法以初始化对象
 		this.init();
+		
+		//最新捡漏滚动
+		setInterval('rollUp()',10000);
+	}
+	
+	function rollUp(){
+		var list = $('#shopping .shoppingContent ul').children('li');
+		var l1 = $(list[0]);
+		
+		l1.animate({'height':'0px','padding-top':'0px'},500,'linear',function(){l1.remove();});
 	}
 </script>
 <style type="text/css">
@@ -159,8 +169,147 @@
 			_fcksavedurl="<%=request.getContextPath()%>/style/images/scroll/5.jpg" />
 	</div>
 
-	<div id="today">
+	<div id="shopping" style="float: right;width: 15%;height: 260px;border: 1px #000000;margin-left: 20px;overflow: hidden;">
+		<div class="head"><span>正在捡漏</span></div>
+		<div class="shoppingContent">
+			<ul>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>商品名称</span>
+						<br>
+						<span>捡漏人</span>
+					</a>
+				</li>
+			</ul>
+		</div>		
+	</div>
+
+	<div id="today" style="width: 80%;">
 		<div class="head"><span>今日捡漏</span></div>
+		<div class="more"><a href="#">更多&gt;&gt;</a></div>
+		<div class="content">
+			<a href="#">
+				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+				<span>xxxx</span>
+			</a>
+			<a href="#">
+				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/2.jpg">
+				<span>xxxx</span>
+			</a>
+			<a href="#">
+				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/3.jpg">
+				<span>xxxx</span>
+			</a>
+		</div>
+	</div>
+	
+	<div id="shoppingFirst" style="float: right;width: 15%;height: 260px;border: 1px #000000;margin-left: 20px;overflow: hidden;">
+		<div class="head"><span>捡漏排行榜</span></div>
+		<div class="shoppingContent">
+			<ul>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>艾书尧</span>
+						<br>
+						<span>捡漏记录：100</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>艾书尧</span>
+						<br>
+						<span>捡漏记录：100</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>艾书尧</span>
+						<br>
+						<span>捡漏记录：100</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
+						<span>艾书尧</span>
+						<br>
+						<span>捡漏记录：100</span>
+					</a>
+				</li>
+			</ul>
+		</div>		
+	</div>	
+	
+	<div id="past" style="width: 80%;">
+		<div class="head"><span>往期漏宝</span></div>
 		<div class="more"><a href="#">更多&gt;&gt;</a></div>
 		<div class="content">
 			<a href="#">
@@ -182,26 +331,5 @@
 		new flashBoxCtrl("flashBox");
 	</script>
 
-	<%-- <script type="text/javascript">
-		var speed = 10;
-		var tab = document.getElementById("demo");
-		var tab1 = document.getElementById("demo1");
-		var tab2 = document.getElementById("demo2");
-		tab2.innerHTML = tab1.innerHTML;
-		function Marquee() {
-			if (tab2.offsetWidth - tab.scrollLeft <= 0)
-				tab.scrollLeft -= tab1.offsetWidth
-			else {
-				tab.scrollLeft++;
-			}
-		}
-		var MyMar = setInterval(Marquee, speed);
-		tab.onmouseover = function() {
-			clearInterval(MyMar)
-		};
-		tab.onmouseout = function() {
-			MyMar = setInterval(Marquee, speed)
-		};
-	</script> --%>
 </body>
 </html>
