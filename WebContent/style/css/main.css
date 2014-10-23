@@ -9,6 +9,7 @@ body {
 
 ul,ol {
 	list-style: none;
+	padding: 0px;
 }
 
 .mainDiv {
@@ -104,4 +105,35 @@ ul,ol {
 	text-decoration: none;
 	font: 10px Microsoft YaHei;
 	text-align: center;
+}
+
+.shoppingContent {
+	float: left;
+}
+
+.shoppingContent ul li {
+	float: inherit;
+	width: 100%;
+	height: 50px;
+	padding: 3px 0px 0px 10px;
+}
+
+.shoppingContent ul {
+	float: inherit;
+}
+
+.shoppingContent ul li a {
+	float: inherit;
+	width: 100%;
+	text-decoration: none;
+}
+
+.shoppingContent ul li a img {
+	float: inherit;
+	width: 40px;
+	height: 40px;
+}
+
+.shoppingContent ul li a span {
+	float: inherit;
 }
