@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+<package name="goods" extends="elsp-default" namespace="/goods" >
+	<action name="show" class="goods.ShowAction" method="show">
+		<result name="success">
+			/WEB-INF/page/goods/goodsTest.jsp
+		</result>
+	</action>
+
+
+</package>
+
+</struts>

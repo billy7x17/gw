@@ -77,4 +77,5 @@
 
 	<include file="/conf/struts/struts_test.xml"></include>
 	<include file="/conf/struts/struts_user.xml"></include>
+	<include file="/conf/struts/struts_goods.xml"></include>
 </struts>

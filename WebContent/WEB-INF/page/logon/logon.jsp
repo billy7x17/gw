@@ -174,7 +174,7 @@
 		<div class="shoppingContent">
 			<ul>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -182,7 +182,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -190,7 +190,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -198,7 +198,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -206,7 +206,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -214,7 +214,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -222,7 +222,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -230,7 +230,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -238,7 +238,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="<%=request.getContextPath()%>/goods/show.shtml">
 						<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 						<span>商品名称</span>
 						<br>
@@ -253,15 +253,15 @@
 		<div class="head"><span>今日捡漏</span></div>
 		<div class="more"><a href="#">更多&gt;&gt;</a></div>
 		<div class="content">
-			<a href="#">
+			<a href="<%=request.getContextPath()%>/goods/show.shtml">
 				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 				<span>xxxx</span>
 			</a>
-			<a href="#">
+			<a href="<%=request.getContextPath()%>/goods/show.shtml">
 				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/2.jpg">
 				<span>xxxx</span>
 			</a>
-			<a href="#">
+			<a href="<%=request.getContextPath()%>/goods/show.shtml">
 				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/3.jpg">
 				<span>xxxx</span>
 			</a>
@@ -312,15 +312,15 @@
 		<div class="head"><span>往期漏宝</span></div>
 		<div class="more"><a href="#">更多&gt;&gt;</a></div>
 		<div class="content">
-			<a href="#">
+			<a href="<%=request.getContextPath()%>/goods/show.shtml">
 				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/1.jpg">
 				<span>xxxx</span>
 			</a>
-			<a href="#">
+			<a href="<%=request.getContextPath()%>/goods/show.shtml">
 				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/2.jpg">
 				<span>xxxx</span>
 			</a>
-			<a href="#">
+			<a href="<%=request.getContextPath()%>/goods/show.shtml">
 				<img alt="1" src="<%=request.getContextPath()%>/style/images/scroll/3.jpg">
 				<span>xxxx</span>
 			</a>

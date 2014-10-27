@@ -5,7 +5,7 @@
 <struts>
 
 	<!-- 请求以默认*.action做后缀，改为以*.shtml做后缀 -->
-	 <constant name="struts.action.extension" value="shtml" />
+	<constant name="struts.action.extension" value="shtml" />
 
 	<!-- 该属性设置Struts 2应用是否使用开发模式。如果设置该属性为true，则可以在应用出错时显示更多、更友好的出错提示。该属性的默认值是false。 -->
 	<constant name="struts.devMode" value="false" />
@@ -77,4 +77,5 @@
 
 	<include file="/conf/struts/struts_test.xml"></include>
 	<include file="/conf/struts/struts_user.xml"></include>
+	<include file="/conf/struts/struts_goods.xml"></include>
 </struts>
