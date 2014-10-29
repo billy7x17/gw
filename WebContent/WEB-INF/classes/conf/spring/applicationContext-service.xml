@@ -18,7 +18,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<bean id="cleanBuffer" class="interceptor.CleanBufferInterceptor"
 		scope="prototype">
 	</bean>
-	
+
 	<bean id="userService" class="user.impl.UserServiceImpl" scope="prototype">
 		<property name="dao">
 			<ref bean="userDao" />
