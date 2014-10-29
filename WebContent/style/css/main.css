@@ -9,11 +9,14 @@ body {
 
 ul,ol {
 	list-style: none;
+
 	padding: 0px;
 }
 
 .mainDiv {
-	margin: 30px 100px 0px 100px;
+	float: left;
+	height: 100%;
+	width: 100%;
 }
 
 #headInfoDiv {
@@ -25,12 +28,19 @@ ul,ol {
 
 #headInfoDiv ul {
 	float: right;
+	margin-bottom: 0px;
 }
 
 #headInfoDiv ul li {
 	float: left;
 	height: 30px;
 	padding: 0 11px 0 12px;
+}
+
+#tabs {
+	float: left;
+	height: 50px;
+	width: 100%;
 }
 
 .tab {

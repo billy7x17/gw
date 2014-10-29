@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+.goodsInfoDiv {
+	float: inherit;
+	clear: left;
+	height: 450px;
+	width: 1000px;
+	margin: 30px 100px 0px 100px;
+}
+
+.photoDiv {
+	float: left;
+	height: 450px;
+	width: 300px;
+}
+
+.photoDiv img {
+	float: inherit;
+	height: 350px;
+	width: 300px;
+}
+
+.photoDiv ul.photoIndex {
+	float: inherit;
+}
+
+.photoDiv ul.photoIndex img {
+	float: left;
+	height: 50px;
+	width: 50px;
+	margin: 3px 0px 2px 20px;
+	cursor: pointer;
+}
+
+.infoDiv {
+	float: right;
+	height: 450px;
+	width: 680px;
+	padding-left: 20px;
+}
+
+.infoDiv h1 {
+	font-family: 微软雅黑,宋体;
+	font-size: 24px;
+	padding-bottom: 9px;
+	margin-top: 15px;
+}
+
+.infoDiv p {
+	height: 10px;
+	background: #E7E7E7;
+	border: 1px solid #DBDBDB;
+	position: relative;
+	border-radius: 3px;
+}
+
+.infoDiv p span {
+	height: 10px;
+	border: 1px solid #FF8A00;
+	background: #FF9600;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	font-size: 0;
+	border-radius: 3px;
+}
+
+.infoDiv ul li {
+	width: 35%;
+	text-align: left;
+	float: left;
+	color: #AEADAD;
+	font-size: 14px;
+	font-family: 微软雅黑,宋体;
+	border: none;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	border-radius: none;
+}
